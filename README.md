@@ -5,9 +5,4 @@ bc bsa cbA
 bvc dbc dsb nbsa
 vcdnb cnbsn
 bdsa bdsa 
-cb zbx bcnbx
-cb cznx cn
-bc b bdsa
-bnvcbsavxsa
-hello
-hiiiii
+c
