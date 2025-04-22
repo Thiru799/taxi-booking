@@ -21,7 +21,8 @@ stages:
                 git clone -b dev https://github.com/Thiru799/taxi-booking.git temp_project
                 ls
                 mkdir -p /d/Projects/demo 
-                cp temp_project/* /d/Projects/demo
+                cp -r temp_project/* /d/Projects/demo
+                ls /d/Projects/demo/
           
           - task: PythonScript@0
             inputs:
