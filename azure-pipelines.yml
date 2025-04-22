@@ -33,8 +33,8 @@ stages:
                 python3 -m venv dev
                 ls
                 cd dev/
-                source dev/bin/activate
-                export HTTPS_PROXY=http://proxy.its.hpecorp.net:8080
+                .\dev\Scripts\Activate.ps1
+                $env:HTTPS_PROXY = "http://proxy.its.hpecorp.net:8080"
                 pip install -r requirements.txt
                 if [ $? -eq 0 ]; then
                     echo "Project setup completed successfully."
