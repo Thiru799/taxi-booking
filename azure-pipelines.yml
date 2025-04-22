@@ -31,6 +31,8 @@ stages:
               scriptLocation: 'inlineScript'
               inlineScript: |
                 python3 -m venv dev
+                ls
+                cd dev/
                 source dev/bin/activate
                 export HTTPS_PROXY=http://proxy.its.hpecorp.net:8080
                 pip install -r requirements.txt
