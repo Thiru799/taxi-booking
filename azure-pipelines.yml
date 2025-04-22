@@ -16,7 +16,8 @@ stages:
             inputs:
               azuresubscription: "justpracticerepo"
               scriptType: 'bash'
-              scriptLocation: scriptpath
-              scriptPath: projects/demo/python.py
-
-
+              scriptLocation: inlineScript
+              inlineScript: |
+                git clone -b main https://github.hpe.com/hpe/HPE_FC_RPA_SUPPORT_BOTS.git temp_project
+                mkdir -p /d/Projects/demo 
+                cp /temp_project/HPE_FC_RPA_SUPPORT_BOTS/* /d/Projects/demo
