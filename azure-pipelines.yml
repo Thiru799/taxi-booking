@@ -18,6 +18,7 @@ stages:
               scriptType: 'bash'
               scriptLocation: inlineScript
               inlineScript: |
-                git clone -b main https://github.hpe.com/hpe/HPE_FC_RPA_SUPPORT_BOTS.git temp_project
+                git clone -b dev https://github.com/Thiru799/taxi-booking.git temp_project
+                ls
                 mkdir -p /d/Projects/demo 
-                cp /temp_project/HPE_FC_RPA_SUPPORT_BOTS/* /d/Projects/demo
+                cp /temp_project/* /d/Projects/demo
