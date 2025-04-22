@@ -24,10 +24,12 @@ stages:
                 cp -r temp_project/* /d/Projects/demo
                 ls /d/Projects/demo/
           
-          - task: PythonScript@0
+          - task: AzureCLI@2
             inputs:
-              scriptSource: 'inline'
-              script: |
+              azureSubscription: 'justpracticerepo'
+              scriptType: 'bash'
+              scriptLocation: 'inlineScript'
+              inlineScript: |
                 python3 -m venv dev
                 source dev/bin/activate
                 export HTTPS_PROXY=http://proxy.its.hpecorp.net:8080
