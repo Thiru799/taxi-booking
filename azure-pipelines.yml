@@ -9,7 +9,7 @@ stages:
       - job: python
         displayName: download and create env for python
         pool:
-         vmImage: 'ubuntu-latest'
+         vmImage: 'windows-latest'
         steps:
           - checkout: self
           - task: AzureCLI@2
