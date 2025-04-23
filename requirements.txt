@@ -1,5 +1,5 @@
-pandas
-pywin32
-sqlalchemy
-pyodbc
-o365
+pandas==1.5.3
+pywin32==310
+SQLAlchemy==2.0.38
+pyodbc==4.0.39
+O365==2.0.0
