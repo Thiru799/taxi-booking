@@ -1,1 +1,5 @@
 pandas
+pywin32
+sqlalchemy
+pyodbc
+o365
