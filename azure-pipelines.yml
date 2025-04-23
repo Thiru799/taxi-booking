@@ -34,7 +34,7 @@ stages:
                 echo "Activating virtual environment..."
                 source dev/Scripts/activate
                 export HTTPS_PROXY=http://proxy.its.hpecorp.net:8080
-                pip install -r requirements.txt
+                pip install --proxy http://proxy.its.hpecorp.net:8080 -r requirements.txt
                 if [ $? -eq 0 ]; then
                     echo "Project setup completed successfully."
                 else
