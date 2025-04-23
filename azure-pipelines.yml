@@ -34,9 +34,6 @@ stages:
                 echo "Activating virtual environment..."
                 source dev/Scripts/activate
                 curl https://pypi.org/simple
-                export HTTPS_PROXY=http://proxy.its.hpecorp.net:8080
-                env | grep -i proxy
-                curl https://pypi.org/simple
                 pip install -r requirements.txt
                 if [ $? -eq 0 ]; then
                     echo "Project setup completed successfully."
@@ -44,3 +41,5 @@ stages:
                     echo "Project setup failed."
                     exit 1
                 fi
+                export HTTPS_PROXY=http://proxy.its.hpecorp.net:8080
+                env | grep -i proxy
