@@ -34,12 +34,21 @@ stages:
                 echo "Activating virtual environment..."
                 source dev/Scripts/activate
                 curl https://pypi.org/simple
-                pip install --prefer-binary -r requirements.txt
-                if [ $? -eq 0 ]; then
-                    echo "Project setup completed successfully."
-                else
-                    echo "Project setup failed."
-                    exit 1
-                fi
-                export HTTPS_PROXY=http://proxy.its.hpecorp.net:8080
-                env | grep -i proxy
+                # pip install --prefer-binary -r requirements.txt
+                # if [ $? -eq 0 ]; then
+                #     echo "Project setup completed successfully."
+                # else
+                #     echo "Project setup failed."
+                #     exit 1
+                # fi
+                # export HTTPS_PROXY=http://proxy.its.hpecorp.net:8080
+                # env | grep -i proxy
+          
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '3.11'
+              addToPath: true
+              architecture: 'x64'
+          - script: |
+              python -m pip install --upgrade pip setuptools wheel
+              pip install --prefer-binary -r requirements.txt
