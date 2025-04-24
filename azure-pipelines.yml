@@ -39,5 +39,4 @@ stages:
               pip install --prefer-binary -r requirements.txt
           - script: |
               echo Python dependencies installed successfully! 
-              displayName: 'Success Message'
               condition: succeeded()
